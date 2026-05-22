@@ -13,8 +13,6 @@ export default function Login() {
   const [usuario, setUsuario] = useState("");
   //estado para el password
   const [password, setPassword] = useState("");
-  //estado para la ciudad
-  const [ciudad] = useState("");
   const [error, setError] = useState("");
   // FUNCION ASINCRONA DE LOGIN
   const handleLogin = async (e: React.FormEvent) => {
@@ -22,7 +20,7 @@ export default function Login() {
     setError("");
 
     // LLAMA AL SERVICIO login() Y ESPERA LA RESPUESTA
-    const response = await login(usuario, password, ciudad);
+    const response = await login(usuario, password);
 
     if (response.success && response.user) {
       //Escribe data en localStorage y redirecciona a dashboard

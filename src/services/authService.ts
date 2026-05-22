@@ -11,7 +11,6 @@ const API_URL = "https://libreriamanitas.com/apilogin";
 export async function login(
   usuario: string,
   password: string,
-  ciudad: string,
 ): Promise<LoginResponse> {
   //PROMESA DE TIPO LoginResponse
 
@@ -22,7 +21,6 @@ export async function login(
       {
         usuario,
         password,
-        ciudad,
       },
       {
         headers: {
